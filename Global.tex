@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[11pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[frenchb]{babel}
 %\usepackage{baskervald}
@@ -11,6 +11,10 @@
 \usepackage{graphicx} % Pour l'ajout des images
 \usepackage{titlesec} % Pour ne plus avoir le mot chapitre
 \usepackage{lettrine} % Pour l'usage des lettrines
+
+% marge à la Beaufils
+\usepackage{geometry}
+  \geometry{a4paper,top=1.5cm,bottom=1.5cm,right=1.5cm,left=1.5cm}
 
 % Pas de mot 'chapitre'
 \titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
@@ -33,8 +37,8 @@
 \fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
 \fancyhead[LO]{\bfseries\rightmark} % Left Odd
 \fancyhead[RE]{\bfseries\leftmark} % Right Even
-\renewcommand{\headrulewidth}{0.5pt}% filet en haut de page
-\addtolength{\headheight}{0.5pt}	% espace pour le filet
+\renewcommand{\headrulewidth}{1pt}% filet en haut de page
+\addtolength{\headheight}{14pt}	% espace pour le filet
 \renewcommand{\footrulewidth}{0pt} % pas de filet en bas
 \fancypagestyle{plain}{ % pages de tetes de chapitre
 \fancyhead{}	% supprime l’entete
@@ -65,44 +69,40 @@
 \tableofcontents
 \newpage
 
-\section{Remerciements}%{{{
-\label{sec:remerciements}
+
+\chapter{Remerciements}%{{{
+\label{cha:remerciements}
 
 \input{remerciements}
 
-% section remerciements (end)%}}}
+% chapter remerciements (end)%}}}
+\chapter{Les prémices du projet}%{{{
+\label{cha:les_pr_mices_du_projet}
 
-\section{Les prémices du projet}%{{{
-\label{sec:les_premices_du_projet}
+\input{premices}
 
-  \input{premices}
+% chapter les_pr_mices_du_projet (end)%}}}
+\chapter{Présentation}%{{{
+\label{cha:presentation}
 
-% section les_premices_du_projet (end)%}}}
+\input{presentation}
 
-\section{Présentation}%{{{
-\label{sec:presentation}
+% chapter presentation (end)%}}}
+\chapter{Organisation}%{{{
+\label{cha:organisation}
 
-  \input{presentation}
 
-% section presentation (end)%}}}
+\input{organisation}
 
-\section{Organisation}%{{{
-\label{sec:organisation}
+% chapter organisation (end)%}}}
+\chapter{Conclusion}%{{{
+\label{cha:conclusion}
 
-  \input{organisation}
+\input{conclusion}
 
-% section organisation (end)%}}}
-
-\section{Conclusion}%{{{
-\label{sec:conclusion}
-
-  \input{conclusion}
-
-% section conclusion (end)%}}}
+% chapter conclusion (end)%}}}
 
 % fake annexe
 \appendix
-
-% Conseils pour réussir ce projet
 
 \end{document}%}}}
