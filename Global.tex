@@ -18,6 +18,12 @@
 % Marge pour la reliure
 \addtolength{\hoffset}{+0.5cm}
 
+% Pour écrire Sommaire au lieu de table des matières
+\renewcommand{\contentsname}{Sommaire}
+
+% Interligne pour le sommaire
+%{\setlength{\baselineskip}{1.9\baselineskip}\tableofcontents\par}
+
 % Style de page personalisé%{{{
 \usepackage{fancyhdr}
 \pagestyle{fancy} % Ceci permet d’avoir les noms de chapitre et de section % en minuscules
@@ -56,6 +62,8 @@
 \begin{document}%{{{
 
 \maketitle
+\tableofcontents
+\newpage
 
 \section{Remerciements}%{{{
 \label{sec:remerciements}
@@ -63,12 +71,6 @@
 \input{remerciements}
 
 % section remerciements (end)%}}}
-
-% Pour écrire Sommaire au lieu de table des matières
-\renewcommand{\contentsname}{Sommaire}
-
-% Interligne pour le sommaire
-%{\setlength{\baselineskip}{1.9\baselineskip}\tableofcontents\par}
 
 \section{Les prémices du projet}%{{{
 \label{sec:les_premices_du_projet}
